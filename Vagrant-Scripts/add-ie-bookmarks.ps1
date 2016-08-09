@@ -172,14 +172,19 @@ function createShortcut {
     $IEFav = [Environment]::GetFolderPath('Favorites', 'None') 
     $Shell = New-Object -ComObject WScript.Shell
     $IEFav = Join-Path -Path $IEFav -ChildPath 'Links'
-
     
     $FullPath = Join-Path -Path $IEFav -ChildPath "$($Name).url"
     
+    # For IE favourites
     $shortcut = $Shell.CreateShortcut($FullPath)
     $shortcut.TargetPath = $shortcutURL
     $shortcut.Save()
    
+    # For desktop shortcuts
+    $shortcutDesktop = $Shell.CreateShortcut("C:\Users\vagrant\Desktop\$name.url")
+    $shortcutDesktop.TargetPath = $shortcutURL
+    $shortcutDesktop.Save()
+
 
 }
 
