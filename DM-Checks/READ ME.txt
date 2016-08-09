@@ -1,0 +1,14 @@
+ To use:
+
+- Run the batch file and a command line prompt will appear, asking you to input your server name and database name.
+- Database username and password is stored as pdm, pdm but can be changed by editing the batch file.
+- Both the batch file and sql file need to stored in the same directory to work.
+- CSV file will be output in the same directory as well.
+
+Checks for:
+
+    Ophanded users
+    Users with the same name
+    Doctypes with the same name
+    LDAP users with the same name
+    Does constID 1038 exist (Upgrading from 6.9 to new)
