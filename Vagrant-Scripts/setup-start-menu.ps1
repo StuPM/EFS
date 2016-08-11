@@ -4,8 +4,6 @@
 # Tested only on Windows Server 2012
 # -----
 
-
-Copy-Item "\\VBOXSVR\vagrant\Scripts\appsFolder.itemdata-ms" -Destination "C:\Users\vagrant\AppData\Local\Microsoft\Windows"
-
+Copy-Item "C:\vagrant\Scripts\appsFolder.itemdata-ms" -Destination "C:\Users\vagrant\AppData\Local\Microsoft\Windows"
 $Name = $MyInvocation.MyCommand.Name
 Write-Host $Name "done"
